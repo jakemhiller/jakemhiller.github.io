@@ -55,6 +55,7 @@ const AboutPage = () => {
               <a href={`mailto:${email}`} target="_top">
                 {email}
               </a>
+              .
             </div>
           </p>
         </div>
