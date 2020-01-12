@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "es6": true,
@@ -8,45 +9,19 @@
   "plugins": ["import", "prettier", "react", "react-hooks"],
 
   "extends": [
+    "eslint:recommended",
     "plugin:import/errors",
     "plugin:react/recommended",
     "prettier",
     "prettier/react"
   ],
 
-  "rules": {
-    "eqeqeq": "error",
-    "no-console": "error",
-    "no-eval": "error",
-    "no-global-assign": "error",
-    "no-underscore-dangle": "error",
-    "no-only-tests/no-only-tests": "error",
-    "prefer-destructuring": [
-      "error",
-      {
-        "object": true,
-        "array": false
-      }
-    ],
-    "prefer-promise-reject-errors": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react/button-has-type": "error",
-    "react/no-access-state-in-setstate": "error",
-    "react/no-array-index-key": "error",
-    "react/no-danger": "error",
-    "react/no-unused-state": "error",
-    "react/prop-types": [
-      "error",
-      {
-        "ignore": ["children"],
-        "skipUndeclared": true
-      }
-    ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
 
-    "import/namespace": "off",
-    "import/no-unresolved": "off",
-    "react/display-name": "off"
+  "rules": {
+    "react/prop-types": 0
   },
 
   "settings": {

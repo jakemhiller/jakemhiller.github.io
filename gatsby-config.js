@@ -3,9 +3,19 @@ module.exports = {
     title: `Jake Hiller`,
     description: `Jake Hiller : frontend engineer`,
     author: `@jaykillah`,
+    email: 'jakemhiller@gmail.com',
   },
   plugins: [
-    "gatsby-plugin-eslint",
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,4 +42,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
