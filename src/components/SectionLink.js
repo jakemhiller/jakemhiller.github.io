@@ -15,7 +15,7 @@ const StyledSectionLink = styled.a`
   justify-content: center;
   font-size: 10vw;
   width: 100%;
-  height: 25vh;
+  height: 100%;
   border: none;
   outline: none;
   margin: 0;

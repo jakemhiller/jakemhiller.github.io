@@ -50,13 +50,12 @@ const AboutPage = () => {
               LinkedIn
             </a>
             {', '}
-            <div>
-              {'and contact me at '}
-              <a href={`mailto:${email}`} target="_top">
-                {email}
-              </a>
-              .
-            </div>
+            <br />
+            {'and contact me at '}
+            <a href={`mailto:${email}`} target="_top">
+              {email}
+            </a>
+            .
           </p>
         </div>
       </BodyCopy>

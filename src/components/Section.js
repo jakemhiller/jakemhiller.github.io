@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  max-height: calc(var(--vh, 1vh) * 25);
+  height: calc(var(--vh) * 25);
   display: flex;
   flex-direction: column;
   flex: 1;
