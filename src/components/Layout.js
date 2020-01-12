@@ -5,17 +5,23 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import './layout.css';
 import styled from 'styled-components';
+import { useWindowSize } from 'react-use';
 
 const SiteContainer = styled.main`
-  min-height: 100vh;
+  height: var(--max-vh);
 `;
 
 const Layout = ({ children }) => {
+  const { height } = useWindowSize();
+  useLayoutEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }, [height]);
   return <SiteContainer>{children}</SiteContainer>;
 };
 
