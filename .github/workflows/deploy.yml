@@ -4,10 +4,15 @@ on:
   workflow_dispatch
 
 jobs:
-  build:
+  deploy:
 
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: bahmutov/npm-install@v1
-    - run: yarn deploy
+    - name: deploy
+      run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/jakemhiller/jakemhiller.github.io.git
+        npx gh-pages -d public -u "github-actions-bot <support+actions@github.com>"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
